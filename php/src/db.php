@@ -11,7 +11,7 @@ $user = 'MYSQL_USER';
 $pass = 'MYSQL_PASSWORD';
 
 // database name
-$mydatabase = 'MYSQL_DATABASE';
+$mydatabase = 'gestion_pacientes';
 // check the mysql connection status
 
 $conn = new mysqli($host, $user, $pass, $mydatabase);

@@ -1,0 +1,6 @@
+{
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+}
