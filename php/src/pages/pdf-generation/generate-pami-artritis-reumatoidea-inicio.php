@@ -417,7 +417,7 @@ $html = '<html lang="es">
       $htmlTableTratamientos .= '</table>';
     }
 
-    $htmlContinuation = '
+    $htmlPart1 = '
     <table class="laboratorio">
       <tr>
         <td class="laboratorio1">'.$RFactor.'</td>
@@ -436,7 +436,7 @@ $html = '<html lang="es">
       </tr>
       ';
     }
-    $htmlContinuation2 = '
+    $htmlPart2 = '
     </table>
     <p class="monodrogaSi">·</p>
     <p class="monodrogaNo">·</p>
@@ -525,7 +525,7 @@ $html = '<html lang="es">
         $htmlKnee .= '<p class="knee" style="left: '.(151 + 85 * $valor + $valor).'px;">x</p>';
       }
     }
-  $html2 = '
+  $htmlPart4 = '
     <p class="iDolorosas">'.$iDolorosas.'</p>
     <p class="iInflamadas">'.$iInflamadas.'</p>
     <p class="dDolorosas">'.$dDolorosas.'</p>
@@ -543,9 +543,9 @@ $html = '<html lang="es">
 </body>
 </html>';
 
-$html1 = $htmlShoulder.$htmlElbow.$htmlWrists.$htmlMcf1.$htmlMcf2.$htmlMcf3.$htmlMcf4.$htmlMcf5.$htmlIfp1.$htmlIfp2.$htmlIfp3.$htmlIfp4.$htmlIfp5.$htmlKnee;
+$htmlPart3 = $htmlShoulder.$htmlElbow.$htmlWrists.$htmlMcf1.$htmlMcf2.$htmlMcf3.$htmlMcf4.$htmlMcf5.$htmlIfp1.$htmlIfp2.$htmlIfp3.$htmlIfp4.$htmlIfp5.$htmlKnee;
 
-$dompdf->loadHtml($html.$htmlTableTratamientos.$htmlContinuation.$htmlTableFarmacos.$htmlContinuation2.$html1.$html2);
+$dompdf->loadHtml($html.$htmlTableTratamientos.$htmlPart1.$htmlTableFarmacos.$htmlPart2.$htmlPart3.$htmlPart4);
 
 // (Optional) Setup the paper size and orientation
 $dompdf->setPaper('A4', 'portrait');

@@ -74,7 +74,7 @@ foreach ($users as $user) {
         </a>
       </div>
       <div class="col-md-3">
-        <a href="pages/pdf-generation/generate-pami-artritis-reumatoidea-inicio.php" class="text-dark">
+        <a href="pages/pami/reumatoidea-inicio.php" class="text-dark">
           <div class="card bg-dark text-white vertical-heigth-card">
             <div class="row g-0">
               <div class="col-5 col-sm-4 align-self-center text-center">
