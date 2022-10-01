@@ -70,7 +70,8 @@ $html = '<html lang="es">
 
   <style>
     * {
-      font-family: Roboto, sans-serif
+      font-family: Roboto, sans-serif;
+      font-size: 10pt;
     }
     .img {
       position: absolute;
@@ -86,81 +87,68 @@ $html = '<html lang="es">
     .fullname {
       position: absolute;
       left: 135px;
-      top: 78px;
-      font-size: 13pt;
+      top: 85px;
     }
     .fechaNac1 {
       position: absolute;
       left: 552px;
-      top: 78px;
-      font-size: 13pt;
+      top: 85px;
     }
     .fechaNac2 {
       position: absolute;
       left: 608px;
-      top: 78px;
-      font-size: 13pt;
+      top: 85px;
     }
     .fechaNac3 {
       position: absolute;
       left: 680px;
-      top: 78px;
-      font-size: 13pt;
+      top: 85px;
     }
     .beneficiario {
       position: absolute;
       left: 112px;
-      top: 103px;
-      font-size: 13pt;
+      top: 108px;
     }
     .inicio_enfermedad1 {
       position: absolute;
       left: 220px;
-      top: 132px;
-      font-size: 13pt;
+      top: 140px;
     }
     .inicio_enfermedad2 {
       position: absolute;
       left: 269px;
-      top: 132px;
-      font-size: 13pt;
+      top: 140px;
     }
     .inicio_enfermedad3 {
       position: absolute;
       left: 303px;
-      top: 132px;
-      font-size: 13pt;
+      top: 140px;
     }
     .peso {
       position: absolute;
       left: 415px;
-      top: 132px;
-      font-size: 13pt;
+      top: 140px;
     }
     .talla {
       position: absolute;
       left: 550px;
-      top: 132px;
-      font-size: 13pt;
+      top: 140px;
     }
     .resumenHC {
       position: absolute;
       left: 28px;
-      top: 189px;
-      font-size: 10pt;
-      line-height: 1.6;
+      top: 181px;
+      line-height: 1.8;
     }
     .tratamientos1 {
       position: absolute;
       left: 28px;
       top: 337px;
-      font-size: 10pt;
     }
     .tratamientos2 {
       position: absolute;
       left: 412px;
       top: 337px;
-      font-size: 10pt;
     }
     td.tratamiento1 {
       width: 95px;
@@ -178,7 +166,6 @@ $html = '<html lang="es">
       position: absolute;
       left: 76px;
       top: 445px;
-      font-size: 10pt;
     }
     td.laboratorio1 {
       width: 102px;
@@ -198,8 +185,7 @@ $html = '<html lang="es">
     .farmacos {
       position: absolute;
       left: 25px;
-      top: 565px;
-      font-size: 10pt;
+      top: 567px;
     }
     td.farmacos1 {
       width: 240px;
@@ -233,63 +219,63 @@ $html = '<html lang="es">
     .asociada {
       position: absolute;
       left: 310px;
-      top: 630px;
+      top: 634px;
     }
     .shoulder {
       position: absolute;
-      top: 696px;
+      top: 699px;
     }
     .elbow {
       position: absolute;
-      top: 710px;
+      top: 713px;
     }
     .wrists {
       position: absolute;
-      top: 726px;
+      top: 729px;
     }
     .mcf1 {
       position: absolute;
-      top: 740px;
+      top: 743px;
     }
     .mcf2 {
       position: absolute;
-      top: 756px;
+      top: 760px;
     }
     .mcf3 {
       position: absolute;
-      top: 771px;
+      top: 775px;
     }
     .mcf4 {
       position: absolute;
-      top: 787px;
+      top: 790px;
     }
     .mcf5 {
       position: absolute;
-      top: 801px;
+      top: 804px;
     }
     .ifp1 {
       position: absolute;
-      top: 816px;
+      top: 819px;
     }
     .ifp2 {
       position: absolute;
-      top: 831px;
+      top: 834px;
     }
     .ifp3 {
       position: absolute;
-      top: 846px;
+      top: 849px;
     }
     .ifp4 {
       position: absolute;
-      top: 861px;
+      top: 866px;
     }
     .ifp5 {
       position: absolute;
-      top: 876px;
+      top: 879px;
     }
     .knee {
       position: absolute;
-      top: 891px;
+      top: 894px;
     }
     .iDolorosas {
       position: absolute;
@@ -303,63 +289,66 @@ $html = '<html lang="es">
     }
     .dDolorosas {
       position: absolute;
-      left: 320px;
+      left: 321px;
       top: 910px;
     }
     .dInflamadas {
       position: absolute;
-      left: 405px;
+      left: 408px;
       top: 910px;
     }
     .dolorosas {
       position: absolute;
-      left: 650px;
-      top: 705px;
+      left: 570px;
+      top: 707px;
     }
     .inflamadas {
       position: absolute;
-      left: 650px;
-      top: 730px;
+      left: 570px;
+      top: 732px;
     }
     .das28 {
       position: absolute;
-      left: 650px;
-      top: 755px;
+      left: 570px;
+      top: 757px;
     }
     .haq {
       position: absolute;
-      left: 650px;
-      top: 780px;
+      left: 570px;
+      top: 782px;
     }
     .vas {
       display: '.$displayVas.';
       position: absolute;
       left: '.$vas.'px;
-      top: 924px;
-      font-size: 80pt;
+      top: 938px;
+      font-size: 60pt;
       margin-top: 1px;
       margin-bottom: 1px;
       font-family: Arial;
     }
     .lugar {
+      width: 150px;
       position: absolute;
       left: 35px;
-      top: 980px;
+      top: 982px;
+      text-align: center;
     }
     .fecha {
       position: absolute;
       left: 68px;
-      top: 1022px;
+      top: 1024px;
+      text-align: center;
     }
     .tel {
       position: absolute;
       left: 580px;
-      top: 975px;
+      top: 977px;
     }
     .email {
       position: absolute;
       left: 580px;
-      top: 1000px;
+      top: 1002px;
     }
   </style>
 

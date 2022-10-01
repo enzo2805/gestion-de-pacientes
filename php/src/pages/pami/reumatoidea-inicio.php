@@ -51,19 +51,20 @@ foreach ($users as $user) {
     <link href="/css/customs/dashboard.css" rel="stylesheet">
   </head>
   <body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
+      </div>
+    </nav>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">PAMI Reumatoidea inicio</li>
+      </ol>
+    </nav>
     <div class="container-fluid">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
-        </div>
-      </nav>
-      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-          <li class="breadcrumb-item active" aria-current="page">PAMI Reumatoidea inicio</li>
-        </ol>
-      </nav>
-      <div class="container-fluid w-75 mt-3 mb-5 border p-3 bg-dark text-white rounded border-info">
+      <h1 class="display-6">PAMI Reumatoidea inicio</h1>
+      <div class="container-fluid w-75 mb-5 border p-3 bg-dark text-white rounded border-info">
         <form name="pamiReumatoideaInicioForm" id="pamiReumatoideaInicioForm" method="post" action="http://localhost:8000/pages/pdf-generation/generate-pami-artritis-reumatoidea-inicio.php">
           <h5 class="h5 mb-2">DATOS PERSONALES</h5>
           <fieldset class="row mb-2">
@@ -126,8 +127,8 @@ foreach ($users as $user) {
             </fieldset>
           </div>
           <div class="row my-3 justify-content-md-center">
-            <button id="btnAddDrug" type="button" class="btn col-2 bg-success text-white mx-2">+</button>
-            <button id="btnDropDrug" type="button" class="btn col-2 bg-danger text-white mx-2">-</button>
+            <button id="btnAddDrug" type="button" class="btn col-2 bg-success text-white mx-2"><i class="fa-solid fa-plus" alt="icono de paciente"></i></button>
+            <button id="btnDropDrug" type="button" class="btn col-2 bg-danger text-white mx-2"><i class="fa-solid fa-minus" alt="icono de paciente"></i></button>
           </div>
           <h5 class="h5 my-2">LABORATORIO ESPECÍFICO ACTUAL: SEROLOGÍA REUMÁTICA Y REACTANTES DE FASE AGUDA</h5>
           <fieldset class="row my-2" name="tableTFP">
@@ -166,8 +167,8 @@ foreach ($users as $user) {
             </fieldset>
           </div>
           <div class="row my-3 justify-content-md-center">
-            <button id="btnAddFarmaco" type="button" class="btn col-2 bg-success text-white mx-2">+</button>
-            <button id="btnDropFarmaco" type="button" class="btn col-2 bg-danger text-white mx-2">-</button>
+            <button id="btnAddFarmaco" type="button" class="btn col-2 bg-success text-white mx-2"><i class="fa-solid fa-plus" alt="icono de paciente"></i></button>
+            <button id="btnDropFarmaco" type="button" class="btn col-2 bg-danger text-white mx-2"><i class="fa-solid fa-minus" alt="icono de paciente"></i></button>
           </div>
           <fieldset class="row mb-2">
             <legend class="col-form-label col-sm-1 offset-1 pt-0">Monodroga</legend>

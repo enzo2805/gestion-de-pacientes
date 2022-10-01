@@ -48,69 +48,87 @@ foreach ($users as $user) {
     <link href="/css/customs/dashboard.css" rel="stylesheet">
   </head>
   <body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Gestión de pacientes</a>
+      </div>
+    </nav>
     <div class="container-fluid">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Gestión de pacientes</a>
-        </div>
-      </nav>
-    <div class="row justify-content-md-center my-3">
-      <div class="col-md-3">
-        <a href="pages/patient/new-patient.php" class="text-primary">
-          <div class="card bg-primary text-white vertical-heigth-card">
-            <div class="row g-0">
-              <div class="col-5 col-sm-4 align-self-center text-center">
-                <i class="fa-solid fa-user fa-6x" alt="icono de paciente"></i>
-              </div>
-              <div class="col-7 col-sm-8">
-                <div class="card-body ">
-                  <h5 class="card-title">Nuevo Paciente</h5>
-                  <p class="card-text">Cargar datos de un nuevo paciente</p>
-                  <p class="card-text"><small class="text-white">Entrar</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="pages/pami/reumatoidea-inicio.php" class="text-dark">
-          <div class="card bg-dark text-white vertical-heigth-card">
-            <div class="row g-0">
-              <div class="col-5 col-sm-4 align-self-center text-center">
-                <img src="images/pami-logo.png" class="img-fluid icono" alt="icono pami">
-              </div>
-              <div class="col-7 col-sm-8">
-                <div class="card-body">
-                  <h5 class="card-title">PAMI</h5>
-                  <p class="card-text">Formulario de <b>inicio</b> de Artritis Reumatoidea</p>
-                  <p class="card-text"><small class="text-white">Entrar</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" class="text-dark">
-          <div class="card bg-dark text-white vertical-heigth-card">
-            <div class="row g-0">
-              <div class="col-5 col-sm-4 align-self-center text-center">
-                <img src="images/pami-logo.png" class="img-fluid icono" alt="icono pami">
-              </div>
-              <div class="col-7 col-sm-8">
-                <div class="card-body">
-                  <h5 class="card-title">PAMI</h5>
-                  <p class="card-text">Formulario de <b>renovación</b> de Artritis Reumatoidea</p>
-                  <p class="card-text"><small class="text-white">Entrar</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
       <div class="row justify-content-md-center my-3">
+        <div class="col-md-3">
+          <a href="pages/patient/new-patient.php" class="text-primary">
+            <div class="card bg-primary text-white vertical-heigth-card">
+              <div class="row g-0">
+                <div class="col-5 col-sm-4 align-self-center text-center">
+                  <i class="fa-solid fa-user fa-6x" alt="icono de paciente"></i>
+                </div>
+                <div class="col-7 col-sm-8">
+                  <div class="card-body ">
+                    <h5 class="card-title">Nuevo Paciente</h5>
+                    <p class="card-text">Cargar datos de un nuevo paciente</p>
+                    <p class="card-text"><small class="text-white">Entrar</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="pages/patient/patient-list.php" class="text-primary">
+            <div class="card bg-primary text-white vertical-heigth-card">
+              <div class="row g-0">
+                <div class="col-5 col-sm-4 align-self-center text-center">
+                  <i class="fa-solid fa-rectangle-list fa-5x" alt="icono de paciente"></i>
+                </div>
+                <div class="col-7 col-sm-8">
+                  <div class="card-body ">
+                    <h5 class="card-title">Lista de Pacientes</h5>
+                    <p class="card-text">Lista de todos los pacientes cargados</p>
+                    <p class="card-text"><small class="text-white">Entrar</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="pages/pami/reumatoidea-inicio.php" class="text-dark">
+            <div class="card bg-dark text-white vertical-heigth-card">
+              <div class="row g-0">
+                <div class="col-5 col-sm-4 align-self-center text-center">
+                  <img src="images/pami-logo.png" class="img-fluid icono" alt="icono pami">
+                </div>
+                <div class="col-7 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">PAMI</h5>
+                    <p class="card-text">Formulario de <b>inicio</b> de Artritis Reumatoidea</p>
+                    <p class="card-text"><small class="text-white">Entrar</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-md-center my-3">
+        <div class="col-md-3">
+          <a href="" class="text-dark">
+            <div class="card bg-dark text-white vertical-heigth-card">
+              <div class="row g-0">
+                <div class="col-5 col-sm-4 align-self-center text-center">
+                  <img src="images/pami-logo.png" class="img-fluid icono" alt="icono pami">
+                </div>
+                <div class="col-7 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">PAMI</h5>
+                    <p class="card-text">Formulario de <b>renovación</b> de Artritis Reumatoidea</p>
+                    <p class="card-text"><small class="text-white">Entrar</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
         <div class="col-md-3">
           <a href="" class="text-success">
             <div class="card bg-success text-white vertical-heigth-card">
@@ -146,22 +164,6 @@ foreach ($users as $user) {
               </div>
             </div>
           </a>
-        </div>
-        <div class="col-md-3 col-offset-3">
-          <!-- <div class="card">
-            <div class="row g-0">
-              <div class="col-5 col-sm-4">
-                <img src="assets/images/bs-images/img-3x4.png" class="img-fluid w-100" alt="card-horizontal-image">
-              </div>
-              <div class="col-7 col-sm-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>

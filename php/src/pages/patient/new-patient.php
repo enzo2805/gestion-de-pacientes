@@ -48,19 +48,20 @@ foreach ($users as $user) {
     <link href="/css/customs/dashboard.css" rel="stylesheet">
   </head>
   <body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
+      </div>
+    </nav>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nuevo Paciente</li>
+      </ol>
+    </nav>
     <div class="container-fluid">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
-        </div>
-      </nav>
-      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Nuevo Paciente</li>
-        </ol>
-      </nav>
-      <div class="container-fluid w-50 mt-3 mb-5 border p-3 bg-dark text-white rounded border-info">
+      <h1 class="display-6">Nuevo Paciente</h1>
+      <div class="container-fluid w-75 mb-5 border p-3 bg-dark text-white rounded border-info">
         <form class="" name="patientForm" id="patientForm" method="post" action="#">
           <fieldset class="row mb-2">
             <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>

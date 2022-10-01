@@ -1,5 +1,5 @@
 php/src/tests.php
 data/db/*
 gestion_pacientes.sql
-php/src/vendor/dompdf/dompdf
-php/src/vendor/sabberworm/php-css-parser
+php/src/vendor/*.*
+php/src/vendor/
