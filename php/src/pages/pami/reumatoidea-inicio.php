@@ -24,6 +24,7 @@ foreach ($users as $user) {
     <meta name="description" content="">
     <meta name="author" content="Enzo Rodriguez">
     <title>Gestión de pacientes</title>
+    <link rel="icon" href="/images/logo.png">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
 
@@ -32,23 +33,6 @@ foreach ($users as $user) {
     <link href="/assets/fontawesome/css/solid.css" rel="stylesheet">
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-    <style>
-      .icono {
-        width: 90% !important;
-        margin: 0 auto; 
-      }
-      .vertical-heigth-card{
-        height: 9rem !important;
-      }
-      * {
-        
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="/css/customs/dashboard.css" rel="stylesheet">
   </head>
   <body class="bg-light">
     <nav class="navbar navbar-dark bg-dark">
@@ -59,13 +43,13 @@ foreach ($users as $user) {
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">PAMI Reumatoidea inicio</li>
+        <li class="breadcrumb-item active" aria-current="page">PAMI artritis reumatoidea inicio</li>
       </ol>
     </nav>
     <div class="container-fluid">
-      <h1 class="display-6">PAMI Reumatoidea inicio</h1>
+      <h1 class="display-6 text-uppercase">PAMI Artritis Reumatoidea inicio</h1>
       <div class="container-fluid w-75 mb-5 border p-3 bg-dark text-white rounded border-info">
-        <form name="pamiReumatoideaInicioForm" id="pamiReumatoideaInicioForm" method="post" action="http://localhost:8000/pages/pdf-generation/generate-pami-artritis-reumatoidea-inicio.php">
+        <form name="pamiReumatoideaInicioForm" id="pamiReumatoideaInicioForm" method="post" action="http://localhost:8000/pages/pdf-generation/generate-reumatoidea-inicio.php">
           <h5 class="h5 mb-2">DATOS PERSONALES</h5>
           <fieldset class="row mb-2">
             <label for="inputName" class="col-sm-2 col-form-label">Nombre y apellido</label>
@@ -100,7 +84,7 @@ foreach ($users as $user) {
           <div class="row mb-3">
             <label for="inputSummaryHC" class="col-sm-2 col-form-label">Resumen de HC</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputSummaryHC" id="inputSummaryHC" rows="4" wrap="hard" maxlength="380"></textarea>
+              <textarea class="form-control" name="inputSummaryHC" id="inputSummaryHC" rows="4" wrap="hard" maxlength="578"></textarea>
             </div>
           </div>
           <!-- TRATAMIENTOS FARMACOLOGICOS PREVIOS
@@ -582,7 +566,6 @@ foreach ($users as $user) {
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-      <script src="/js/customs/dashboard.js"></script>
 
       <script src="reumatoidea-inicio.js"></script>
   </body>

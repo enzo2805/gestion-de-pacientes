@@ -164,6 +164,8 @@ var dInflamadasInput = document.getElementById('dInflamadas');
 var dolorosasTotal = document.getElementById('dolorosasTotal');
 var inflamadasTotal = document.getElementById('inflamadasTotal');
 
+var das28 = document.getElementById('das28');
+
 var one = 0;
 var two = 0;
 var three = 0;
@@ -316,6 +318,8 @@ function changeLabel(value, checked){
       iDolorosasLabel.innerHTML = one;
       iDolorosasInput.value = one;
       dolorosasTotal.value = one + three;
+      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
+      form.das28.value = value.toFixed(4);
       break;
     }
     case '2':{
@@ -323,6 +327,8 @@ function changeLabel(value, checked){
       iInflamadasLabel.innerHTML = two;
       iInflamadasInput.value = two;
       inflamadasTotal.value = two + four;
+      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
+      form.das28.value = value.toFixed(4);
       break;
     }
     case '3':{
@@ -330,6 +336,8 @@ function changeLabel(value, checked){
       dDolorosasLabel.innerHTML = three;
       dDolorosasInput.value = three;
       dolorosasTotal.value = one + three;
+      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
+      form.das28.value = value.toFixed(4);
       break;
     }
     case '4':{
@@ -337,7 +345,25 @@ function changeLabel(value, checked){
       dInflamadasLabel.innerHTML = four;
       dInflamadasInput.value = four;
       inflamadasTotal.value = two + four;
+      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
+      form.das28.value = value.toFixed(4);
       break;
     }
   }
 }
+
+form.inputVSG.addEventListener('change', (e) => {
+  let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
+  form.das28.value = value.toFixed(4);
+})
+
+const vasRadios = document.getElementsByName('vasRadio');
+
+vasRadios.forEach(radio => {
+  radio.addEventListener('change', (e) => {
+    let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
+    form.das28.value = value.toFixed(4);
+  })
+});
+
+//DAS28=0.56*NAD+0.28*NAT+0.7*ln(VSG)+0.014*GH

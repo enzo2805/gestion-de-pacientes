@@ -1,0 +1,605 @@
+---
+FieldType: Text
+FieldName: Beneficiario N
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: fecha nac mes
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 2
+---
+FieldType: Text
+FieldName: fecha nac a&#241;o
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 4
+---
+FieldType: Text
+FieldName: fecha nac dia
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 2
+---
+FieldType: Text
+FieldName: Peso
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Nombre y Apellido
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Resumen HC 1
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Resumen HC 2
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Resumen HC 3
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Resumen HC 4
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Talla
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: VSG
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: PCR
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: CCP
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: droga_4
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: presentacion_4
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: dosis_4
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: droga_5
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: presentacion_5
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: dosis_5
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: droga_6
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: presentacion_6
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: dosis_6
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Button
+FieldName: Group1
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: Opci&#243;n1
+FieldStateOption: Off
+FieldStateOption: Opci&#243;n2
+---
+FieldType: Text
+FieldName: Asociada
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Check Box1
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box2
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box3
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box4
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box5
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box6
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box7
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box8
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box9
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box12
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box13
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box14
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box15
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box16
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box17
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box18
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box19
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box20
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box21
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box22
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box23
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box24
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box25
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box26
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box27
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box28
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box29
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box30
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box10
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box11
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box31
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box32
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box33
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box34
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box35
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box36
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box37
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box38
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box39
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box40
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box41
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box42
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box43
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box44
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box45
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box46
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box47
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box48
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box49
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box50
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box51
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box52
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box54
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box53
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box55
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: Check Box56
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: S&#237;
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: Factor R
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Subtotal_dolor_izq
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: Subtotal_inflamadas_izq
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: Subtotal_dolor_der
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: Subtotal_inflamadas_der
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: Dolorosas
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Inflamadas
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: DAS 28
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: HAQ
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: VAS Global
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: Opci&#243;n1
+FieldStateOption: Off
+FieldStateOption: Opci&#243;n2
+FieldStateOption: Opci&#243;n3
+FieldStateOption: Opci&#243;n4
+FieldStateOption: Opci&#243;n5
+FieldStateOption: Opci&#243;n6
+FieldStateOption: Opci&#243;n7
+FieldStateOption: Opci&#243;n8
+FieldStateOption: Opci&#243;n9
+FieldStateOption: Opci&#243;n10
+FieldStateOption: Opci&#243;n0
+---
+FieldType: Text
+FieldName: Lugar
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Mail
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Fecha
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Tel
+FieldFlags: 8388608
+FieldJustification: Left

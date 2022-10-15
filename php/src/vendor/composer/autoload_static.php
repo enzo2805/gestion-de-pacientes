@@ -7,6 +7,12 @@ namespace Composer\Autoload;
 class ComposerStaticInitbbc05a7bb6ab8b97fadb419213cf0565
 {
     public static $prefixLengthsPsr4 = array (
+        'm' => 
+        array (
+            'mikehaertl\\tmp\\' => 15,
+            'mikehaertl\\shellcommand\\' => 24,
+            'mikehaertl\\pdftk\\' => 17,
+        ),
         'S' => 
         array (
             'Svg\\' => 4,
@@ -32,6 +38,18 @@ class ComposerStaticInitbbc05a7bb6ab8b97fadb419213cf0565
     );
 
     public static $prefixDirsPsr4 = array (
+        'mikehaertl\\tmp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-tmpfile/src',
+        ),
+        'mikehaertl\\shellcommand\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
+        'mikehaertl\\pdftk\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-pdftk/src',
+        ),
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
@@ -65,6 +83,12 @@ class ComposerStaticInitbbc05a7bb6ab8b97fadb419213cf0565
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'FPDM' => __DIR__ . '/..' . '/tmw/fpdm/src/fpdm.php',
+        'FilterASCII85' => __DIR__ . '/..' . '/tmw/fpdm/src/filters/FilterASCII85.php',
+        'FilterASCIIHex' => __DIR__ . '/..' . '/tmw/fpdm/src/filters/FilterASCIIHex.php',
+        'FilterFlate' => __DIR__ . '/..' . '/tmw/fpdm/src/filters/FilterFlate.php',
+        'FilterLZW' => __DIR__ . '/..' . '/tmw/fpdm/src/filters/FilterLZW.php',
+        'FilterStandard' => __DIR__ . '/..' . '/tmw/fpdm/src/filters/FilterStandard.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

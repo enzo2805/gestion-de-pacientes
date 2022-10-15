@@ -24,6 +24,7 @@ foreach ($users as $user) {
     <meta name="description" content="">
     <meta name="author" content="Enzo Rodriguez">
     <title>Gestión de pacientes</title>
+    <link rel="icon" href="/images/logo.png">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
 
@@ -56,11 +57,11 @@ foreach ($users as $user) {
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Nuevo Paciente</li>
+        <li class="breadcrumb-item active" aria-current="page">Nuevo paciente</li>
       </ol>
     </nav>
     <div class="container-fluid">
-      <h1 class="display-6">Nuevo Paciente</h1>
+      <h1 class="display-6 text-uppercase">Nuevo Paciente</h1>
       <div class="container-fluid w-75 mb-5 border p-3 bg-dark text-white rounded border-info">
         <form class="" name="patientForm" id="patientForm" method="post" action="#">
           <fieldset class="row mb-2">
@@ -148,19 +149,19 @@ foreach ($users as $user) {
           <div class="row mb-3">
             <label for="inputHereditaryBackground" class="col-sm-2 col-form-label">Antecedentes Hereditarios</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputHereditaryBackground" id="inputHereditaryBackground"></textarea>
+              <textarea class="form-control" name="inputHereditaryBackground" id="inputHereditaryBackground" rows="4" wrap="hard" maxlength="296"></textarea>
             </div>
           </div>
           <div class="row mb-3">
             <label for="inputPersonalBackground" class="col-sm-2 col-form-label">Antecedentes Personales</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputPersonalBackground" id="inputPersonalBackground"></textarea>
+              <textarea class="form-control" name="inputPersonalBackground" id="inputPersonalBackground" rows="4" wrap="hard" maxlength="296"></textarea>
             </div>
           </div>
           <div class="row mb-3">
             <label for="inputCurrentDisease" class="col-sm-2 col-form-label">Enfermedad Actual</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputCurrentDisease" id="inputCurrentDisease"></textarea>
+              <textarea class="form-control" name="inputCurrentDisease" id="inputCurrentDisease" rows="4" wrap="hard" maxlength="197"></textarea>
             </div>
           </div>
           <fieldset class="row mb-2">
@@ -186,7 +187,7 @@ foreach ($users as $user) {
           <div class="row mb-3">
             <label for="inputHead" class="col-sm-2 col-form-label">Cabeza</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputHead" id="inputHead"></textarea>
+              <textarea class="form-control" name="inputHead" id="inputHead" rows="4" wrap="hard" maxlength="210"></textarea>
             </div>
           </div>
           <div class="row mb-3">
@@ -216,7 +217,7 @@ foreach ($users as $user) {
           <div class="row mb-3">
             <label for="inputAbdomen" class="col-sm-2 col-form-label">Abdomen</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputAbdomen" id="inputAbdomen"></textarea>
+              <textarea class="form-control" name="inputAbdomen" id="inputAbdomen" rows="4" wrap="hard" maxlength="208"></textarea>
             </div>
           </div>
           <div class="row mb-3">
@@ -240,7 +241,7 @@ foreach ($users as $user) {
           <div class="row mb-3">
             <label for="inputEvaluation&Treatment" class="col-sm-2 col-form-label">Evaluación y tratamiento</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="inputEvaluation" id="inputEvaluation&Treatment"></textarea>
+              <textarea class="form-control" name="inputEvaluation" id="inputEvaluation&Treatment" rows="4" wrap="hard" maxlength="402"></textarea>
             </div>
           </div>
           <button type="button" id="saveBtn" class="btn btn-primary">Guardar</button>
@@ -256,7 +257,6 @@ foreach ($users as $user) {
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-      <script src="/js/customs/dashboard.js"></script>
 
       <script src="new-patient.js"></script>
   </body>
