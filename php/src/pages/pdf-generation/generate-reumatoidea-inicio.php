@@ -630,9 +630,12 @@ if ($result === false) {
     $error = $pdf->getError();
 }
 
+$today = date("dmy-his");
+$fileName = $name.$today.'.pdf';
+
 $headers = array(
     'Content-Type'  => 'application/pdf',
-    'Content-Disposition' => 'attachment; filename=temp.pdf'
+    'Content-Disposition' => 'attachment; filename='.$fileName
 );
 
-$pdf->send('temp.pdf', false, $headers);
+$pdf->send($fileName, false, $headers);

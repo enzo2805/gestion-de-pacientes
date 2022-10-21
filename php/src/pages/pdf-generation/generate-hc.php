@@ -136,7 +136,8 @@ $fields = array(
 
 $pdf = new FPDM('../../forms/hc.pdf');
 
-$fileName = 'temp.pdf';
+$today = date("dmy-his");
+$fileName = $apellido.$nombre.$today.'.pdf';
 
 $pdf->Load($fields, true);
 $pdf->Merge();
