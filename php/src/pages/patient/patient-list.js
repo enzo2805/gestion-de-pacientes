@@ -18,7 +18,12 @@ $(document).ready( function () {
       {
         targets: -1,
         data: null,
-        defaultContent: '<button class="btn btn-primary" >Ver</button>',
+        render: function (data, type, row) {
+          return `
+          <button class="btn btn-primary" >Ver</button> 
+          <a class="btn btn-primary" title="PAMI: inicio" href="../pami/reumatoidea-inicio.php?id=`+ row['id'] +`&name=`+ row['nombre']+ ' ' + row['apellido'] +`">PAMI: inicio</a>
+          <a class="btn btn-primary" title="PAMI: renovación" href="../pami/reumatoidea-renovacion.php?id=`+ row['id'] +`&name=`+ row['nombre']+ ' ' + row['apellido'] +`">PAMI: renovación</a>`
+        }
       },
     ],
   });
@@ -28,6 +33,7 @@ $(document).ready( function () {
 
     var data = table.row($(this).parents('tr')).data();
     // alert(data['nombre'] + "'s salary is: " + data['afiliado_nro']);
+    form.id.value = data['id'];
     form.inputName.value = data['nombre'];
     form.inputHCNumber.value = data['hc_nro'];
     form.inputLastName.value = data['apellido'];
@@ -63,4 +69,36 @@ $(document).ready( function () {
     $('#myModal').modal('show');
   });
   
+});
+
+var saveURL = 'http://localhost:8000/pages/patient/update-patient.php';
+
+const btnUpdate = document.getElementById('btnUpdate');
+btnUpdate.addEventListener('click', (event) => {
+  var form = document.forms.namedItem('patientForm');
+  event.preventDefault();
+  const XHR = new XMLHttpRequest();
+  const FD = new FormData(form);
+
+  XHR.addEventListener('load', (event) => {
+    const data = event.target.responseText;
+    console.log(data);
+    const response = event.target.responseText;
+    if (response.includes('True')) {
+      alert('Datos guardados exitosamente');
+      var table = $('#table_id').DataTable();
+      $('#myModal').modal('hide');
+      table.clear().draw();
+    } else {
+      alert('Datos no guardados');
+    }
+  });
+
+  XHR.addEventListener('error', (event) => {
+    alert('Oops! Something went wrong.');
+  });
+
+  XHR.open('POST', saveURL);
+  XHR.send(FD);
+  event.preventDefault();
 });

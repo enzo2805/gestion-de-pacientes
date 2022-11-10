@@ -1,20 +1,8 @@
 <?php
-require_once '../../db.php';
 
-// select query
-/*$sql = 'SELECT * FROM users';
+$id = $_GET['id'];
+$name = $_GET['name'];
 
-if ($result = $conn->query($sql)) {
-  while ($data = $result->fetch_object()) {
-    $users[] = $data;
-  }
-}
-
-foreach ($users as $user) {
-  echo "<br>";
-  echo $user->username . " " . $user->password;
-  echo "<br>";
-}*/
 ?>
 <!doctype html>
 <html lang="es">
@@ -40,21 +28,24 @@ foreach ($users as $user) {
         <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
       </div>
     </nav>
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="mt-2 mx-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">PAMI artritis reumatoidea inicio</li>
+        <li class="breadcrumb-item"><a href="../../." class=" badge bg-primary text-white">Gestión de Pacientes</a></li>
+        <li class="breadcrumb-item"><a href="../patient/patient-list.php" class=" badge bg-primary text-white">Lista de pacientes</a></li>
+        <li class="breadcrumb-item active badge bg-light" aria-current="page">PAMI artritis reumatoidea inicio</li>
       </ol>
     </nav>
     <div class="container-fluid">
       <h1 class="display-6 text-uppercase">PAMI Artritis Reumatoidea inicio</h1>
       <div class="container-fluid w-75 mb-5 border p-3 bg-dark text-white rounded border-info">
-        <form name="pamiReumatoideaInicioForm" id="pamiReumatoideaInicioForm" method="post" action="http://localhost:8000/pages/pdf-generation/generate-reumatoidea-inicio.php">
+        <form name="pamiReumatoideaInicioForm" id="pamiReumatoideaInicioForm" method="post" action="http://localhost:8000/pages/pami/load-reumatoidea-inicio.php">
+          <!-- http://localhost:8000/pages/pdf-generation/generate-reumatoidea-inicio.php -->
           <h5 class="h5 mb-2">DATOS PERSONALES</h5>
+          <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
           <fieldset class="row mb-2">
             <label for="inputName" class="col-sm-2 col-form-label">Nombre y apellido</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="inputName" id="inputName">
+              <input type="text" class="form-control" name="inputName" id="inputName" value="<?php echo $name ?>">
             </div>
             <label for="inputBirthDate" class="col-sm-1 col-form-label">Fecha de nacimiento</label>
             <div class="col-sm-3">
@@ -140,7 +131,7 @@ foreach ($users as $user) {
               <div class="col-sm-3">
                 <input type="text" class="form-control" name="inputFarmaco[]" id="inputFarmaco">
               </div>
-              <label for="inputPresentation" class="col-sm-1 col-form-label">Presentación</label>
+              <label for="inputPresentation" class="col-sm-1 col-form-label">Presenta ción</label>
               <div class="col-sm-3">
                 <input type="text" class="form-control" name="inputPresentation[]" id="inputPresentation">
               </div>
@@ -184,8 +175,8 @@ foreach ($users as $user) {
                     Izquierdo
                   </div>
                   <div class="row text-center">
-                    <div class="col-6 border">Dolorosas</div>
-                    <div class="col-6 border">Inflamadas</div>
+                    <div class="col-6 border">D</div>
+                    <div class="col-6 border">I</div>
                   </div>
                 </div>
                 <div class="col-4">
@@ -193,8 +184,8 @@ foreach ($users as $user) {
                     Derecho
                   </div>
                   <div class="row text-center">
-                    <div class="col-6 border">Dolorosas</div>
-                    <div class="col-6 border">Inflamadas</div>
+                    <div class="col-6 border">D</div>
+                    <div class="col-6 border">I</div>
                   </div>
                 </div>
               </div>
@@ -203,16 +194,16 @@ foreach ($users as $user) {
                   Hombros
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="shoulder[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="shoulder[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="shoulder[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="shoulder[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="shoulder[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="shoulder[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -220,16 +211,16 @@ foreach ($users as $user) {
                   Codos
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="elbow[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="elbow[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="elbow[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="elbow[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="elbow[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="elbow[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -237,16 +228,16 @@ foreach ($users as $user) {
                   Muñecas
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="wrists[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="wrists[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="wrists[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="wrists[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="wrists[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="wrists[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -254,16 +245,16 @@ foreach ($users as $user) {
                   MCF 1
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf1[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="mcf1[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="mcf1[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf1[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf1[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf1[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -271,16 +262,16 @@ foreach ($users as $user) {
                   MCF 2
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf2[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="mcf2[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="mcf2[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf2[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf2[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf2[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -288,16 +279,16 @@ foreach ($users as $user) {
                   MCF 3
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf3[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="mcf3[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="mcf3[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf3[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf3[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf3[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -305,16 +296,16 @@ foreach ($users as $user) {
                   MCF 4
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf4[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="mcf4[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="mcf4[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf4[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf4[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf4[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -322,16 +313,16 @@ foreach ($users as $user) {
                   MCF 5
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf5[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="mcf5[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="mcf5[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf5[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="mcf5[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="mcf5[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -339,16 +330,16 @@ foreach ($users as $user) {
                   IFP 1
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp1[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="ifp1[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="ifp1[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp1[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp1[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp1[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -356,16 +347,16 @@ foreach ($users as $user) {
                   IFP 2
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp2[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="ifp2[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="ifp2[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp2[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp2[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp2[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -373,16 +364,16 @@ foreach ($users as $user) {
                   IFP 3
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp3[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="ifp3[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="ifp3[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp3[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp3[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp3[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -390,16 +381,16 @@ foreach ($users as $user) {
                   IFP 4
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp4[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="ifp4[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="ifp4[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp4[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp4[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp4[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -407,16 +398,16 @@ foreach ($users as $user) {
                   IFP 5
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp5[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="ifp5[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="ifp5[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp5[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="ifp5[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="ifp5[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top">
@@ -424,16 +415,16 @@ foreach ($users as $user) {
                   Rodillas
                 </div>
                 <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="knee[]" value="1">
+                  <input class="form-check-input" type="checkbox" name="knee[]" value="0">
                 </div>
                 <div class="col-2 border-end">
+                  <input class="form-check-input" type="checkbox" name="knee[]" value="1">
+                </div>
+                <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="knee[]" value="2">
                 </div>
                 <div class="col-2">
                   <input class="form-check-input" type="checkbox" name="knee[]" value="3">
-                </div>
-                <div class="col-2">
-                  <input class="form-check-input" type="checkbox" name="knee[]" value="4">
                 </div>
               </div>
               <div class="row text-center border-top ">

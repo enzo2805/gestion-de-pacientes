@@ -4,78 +4,82 @@ const btnDrop = document.getElementById('btnDropDrug');
 let cantDrugs = 1;
 const maxDrugs = 6;
 
-btnAdd.addEventListener('click', () => {
+if (btnAdd) {
+  btnAdd.addEventListener('click', () => {
   
-  const tableDrugs = document.getElementById('drugs');
+    const tableDrugs = document.getElementById('drugs');
 
-  let fieldset = document.createElement('fieldset');
-  fieldset.setAttribute('class','row mb-2');
+    let fieldset = document.createElement('fieldset');
+    fieldset.setAttribute('class','row mb-2');
 
-  for (let i = 1 ; i <= 4 ; i++) {
+    for (let i = 1 ; i <= 4 ; i++) {
 
-    let div = document.createElement('div');
-    let label = document.createElement('label');
-    let input = document.createElement('input');
-    div.setAttribute('class', 'col-sm-2');
-    label.setAttribute('class', 'col-sm-1 col-form-label');
-    input.setAttribute('class', 'form-control');
-    input.setAttribute('type', 'text');
-    switch (i){
-      case 1:{
-        label.setAttribute('for','inputDrug'+cantDrugs);
-        label.innerHTML = 'Droga';
-        input.setAttribute('name', 'inputDrug[]');
-        input.setAttribute('id', 'inputDrug'+cantDrugs);
-        div.appendChild(input);
-        fieldset.appendChild(label);
-        fieldset.appendChild(div);
-        break
-      }
-      case 2:{
-        label.setAttribute('for','inputDosis'+cantDrugs);
-        label.innerHTML = 'Dosis';
-        input.setAttribute('name', 'inputDosis[]');
-        input.setAttribute('id', 'inputDosis'+cantDrugs);
-        div.appendChild(input);
-        fieldset.appendChild(label);
-        fieldset.appendChild(div);
-        break
-      }
-      case 3:{
-        label.setAttribute('for','inputTime'+cantDrugs);
-        label.innerHTML = 'Tiempo';
-        input.setAttribute('name', 'inputTime[]');
-        input.setAttribute('id', 'inputTime'+cantDrugs);
-        div.appendChild(input);
-        fieldset.appendChild(label);
-        fieldset.appendChild(div);
-        break
-      }
-      case 4:{
-        label.setAttribute('for','inputResults'+cantDrugs);
-        label.innerHTML = 'Resultados';
-        input.setAttribute('name', 'inputResults[]');
-        input.setAttribute('id', 'inputResults'+cantDrugs);
-        div.appendChild(input);
-        fieldset.appendChild(label);
-        fieldset.appendChild(div);
-        break
+      let div = document.createElement('div');
+      let label = document.createElement('label');
+      let input = document.createElement('input');
+      div.setAttribute('class', 'col-sm-2');
+      label.setAttribute('class', 'col-sm-1 col-form-label');
+      input.setAttribute('class', 'form-control');
+      input.setAttribute('type', 'text');
+      switch (i){
+        case 1:{
+          label.setAttribute('for','inputDrug'+cantDrugs);
+          label.innerHTML = 'Droga';
+          input.setAttribute('name', 'inputDrug[]');
+          input.setAttribute('id', 'inputDrug'+cantDrugs);
+          div.appendChild(input);
+          fieldset.appendChild(label);
+          fieldset.appendChild(div);
+          break
+        }
+        case 2:{
+          label.setAttribute('for','inputDosis'+cantDrugs);
+          label.innerHTML = 'Dosis';
+          input.setAttribute('name', 'inputDosis[]');
+          input.setAttribute('id', 'inputDosis'+cantDrugs);
+          div.appendChild(input);
+          fieldset.appendChild(label);
+          fieldset.appendChild(div);
+          break
+        }
+        case 3:{
+          label.setAttribute('for','inputTime'+cantDrugs);
+          label.innerHTML = 'Tiempo';
+          input.setAttribute('name', 'inputTime[]');
+          input.setAttribute('id', 'inputTime'+cantDrugs);
+          div.appendChild(input);
+          fieldset.appendChild(label);
+          fieldset.appendChild(div);
+          break
+        }
+        case 4:{
+          label.setAttribute('for','inputResults'+cantDrugs);
+          label.innerHTML = 'Resultados';
+          input.setAttribute('name', 'inputResults[]');
+          input.setAttribute('id', 'inputResults'+cantDrugs);
+          div.appendChild(input);
+          fieldset.appendChild(label);
+          fieldset.appendChild(div);
+          break
+        }
       }
     }
-  }
-  if (cantDrugs < maxDrugs){
-    tableDrugs.appendChild(fieldset);
-    cantDrugs++;
-  }
-});
+    if (cantDrugs < maxDrugs){
+      tableDrugs.appendChild(fieldset);
+      cantDrugs++;
+    }
+  });
+}
 
-btnDrop.addEventListener('click', () => {
-  const tableDrugs = document.getElementById('drugs');
-  if (cantDrugs > 1) {
-    tableDrugs.removeChild(tableDrugs.lastElementChild);
-    cantDrugs--;
-  }
-})
+if (btnDrop) {
+  btnDrop.addEventListener('click', () => {
+    const tableDrugs = document.getElementById('drugs');
+    if (cantDrugs > 1) {
+      tableDrugs.removeChild(tableDrugs.lastElementChild);
+      cantDrugs--;
+    }
+  })
+}
 
 const btnAddFarmaco = document.getElementById('btnAddFarmaco');
 const btnDropFarmaco = document.getElementById('btnDropFarmaco');
@@ -111,7 +115,7 @@ btnAddFarmaco.addEventListener('click', () => {
       }
       case 2:{
         label.setAttribute('for','inputPresentation'+cantFarmacos);
-        label.innerHTML = 'Presentación';
+        label.innerHTML = 'Presenta ción';
         input.setAttribute('name', 'inputPresentation[]');
         input.setAttribute('id', 'inputPresentation'+cantFarmacos);
         div.appendChild(input);
@@ -146,8 +150,50 @@ if (cantFarmacos > 1) {
 })
 
 // Enviar el form
+const indexURL = "http://localhost:8000/";
+const loadURL = "http://localhost:8000/pages/pami/load-reumatoidea-inicio.php"
 const btn = document.getElementById('saveBtn');
 const form = document.forms.namedItem('pamiReumatoideaInicioForm');
+
+function sendData(event) {
+  
+  event.preventDefault();
+  const XHR = new XMLHttpRequest();
+  const FD = new FormData(form);
+  FD.append('subtotales[]', one);
+  FD.append('subtotales[]', two);
+  FD.append('subtotales[]', three);
+  FD.append('subtotales[]', four);
+
+  // Define what happens on successful data submission
+  XHR.addEventListener('load', (event) => {
+    const data = event.target.responseText;
+    console.log(data);
+    const response = event.target.responseText;
+    if (response.includes('True')) {
+      alert('Datos guardados exitosamente');
+      window.location.href = indexURL;
+    } else {
+      alert('Datos no guardados');
+    }
+  });
+
+  // Define what happens in case of error
+  XHR.addEventListener('error', (event) => {
+    alert('Oops! Something went wrong.');
+  });
+
+  // Set up our request
+  XHR.open('POST', loadURL);
+
+  // Send our FormData object; HTTP headers are set automatically
+  XHR.send(FD);
+  event.preventDefault();
+}
+
+btn.addEventListener('click', (event) => {
+  sendData(event);
+});
 
 // checkbocks counting
 
@@ -175,7 +221,7 @@ const shoulderChk = document.getElementsByName('shoulder[]');
 
 shoulderChk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -185,7 +231,7 @@ const elbowChk = document.getElementsByName('elbow[]');
 
 elbowChk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -195,7 +241,7 @@ const wristsChk = document.getElementsByName('wrists[]');
 
 wristsChk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -205,7 +251,7 @@ const mcf1Chk = document.getElementsByName('mcf1[]');
 
 mcf1Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -215,7 +261,7 @@ const mcf2Chk = document.getElementsByName('mcf2[]');
 
 mcf2Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -225,7 +271,7 @@ const mcf3Chk = document.getElementsByName('mcf3[]');
 
 mcf3Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -235,7 +281,7 @@ const mcf4Chk = document.getElementsByName('mcf4[]');
 
 mcf4Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -245,7 +291,7 @@ const mcf5Chk = document.getElementsByName('mcf5[]');
 
 mcf5Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -255,7 +301,7 @@ const ifp1Chk = document.getElementsByName('ifp1[]');
 
 ifp1Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -265,7 +311,7 @@ const ifp2Chk = document.getElementsByName('ifp2[]');
 
 ifp2Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -275,7 +321,7 @@ const ifp3Chk = document.getElementsByName('ifp3[]');
 
 ifp3Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -285,7 +331,7 @@ const ifp4Chk = document.getElementsByName('ifp4[]');
 
 ifp4Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -295,7 +341,7 @@ const ifp5Chk = document.getElementsByName('ifp5[]');
 
 ifp5Chk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -305,7 +351,7 @@ const kneeChk = document.getElementsByName('knee[]');
 
 kneeChk.forEach(checkbox => {
   checkbox.addEventListener('change', (e) => {
-    let value = e.target.value;
+    let value = parseInt(e.target.value) + 1;
     let checked = e.target.checked;
     changeLabel(value, checked);
   })
@@ -313,7 +359,7 @@ kneeChk.forEach(checkbox => {
 
 function changeLabel(value, checked){
   switch (value) {
-    case '1':{
+    case 1:{
       (checked) ? one++ : one--;
       iDolorosasLabel.innerHTML = one;
       iDolorosasInput.value = one;
@@ -322,7 +368,7 @@ function changeLabel(value, checked){
       form.das28.value = value.toFixed(4);
       break;
     }
-    case '2':{
+    case 2:{
       (checked) ? two++ : two--;
       iInflamadasLabel.innerHTML = two;
       iInflamadasInput.value = two;
@@ -331,7 +377,7 @@ function changeLabel(value, checked){
       form.das28.value = value.toFixed(4);
       break;
     }
-    case '3':{
+    case 3:{
       (checked) ? three++ : three--;
       dDolorosasLabel.innerHTML = three;
       dDolorosasInput.value = three;
@@ -340,7 +386,7 @@ function changeLabel(value, checked){
       form.das28.value = value.toFixed(4);
       break;
     }
-    case '4':{
+    case 4:{
       (checked) ? four++ : four--;
       dInflamadasLabel.innerHTML = four;
       dInflamadasInput.value = four;

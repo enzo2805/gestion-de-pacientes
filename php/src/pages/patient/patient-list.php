@@ -1,21 +1,3 @@
-<?php
-require_once '../../db.php';
-
-// select query
-/*$sql = 'SELECT * FROM users';
-
-if ($result = $conn->query($sql)) {
-  while ($data = $result->fetch_object()) {
-    $users[] = $data;
-  }
-}
-
-foreach ($users as $user) {
-  echo "<br>";
-  echo $user->username . " " . $user->password;
-  echo "<br>";
-}*/
-?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -36,11 +18,9 @@ foreach ($users as $user) {
     <link rel="stylesheet" type="text/css" href="/assets/DataTables/datatables.min.css"/>
     <style>
       .icono {
-        width: 90% !important;
+        width: 42px;
         margin: 0 auto; 
-      }
-      .vertical-heigth-card{
-        height: 9rem !important;
+        padding: 5px;
       }
     </style>
 
@@ -54,10 +34,10 @@ foreach ($users as $user) {
         <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
       </div>
     </nav>
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="mt-2 mx-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Lista de pacientes</li>
+        <li class="breadcrumb-item"><a href="../../." class=" badge bg-primary text-white">Gestión de Pacientes</a></li>
+        <li class="breadcrumb-item badge bg-light active" aria-current="page">Lista de pacientes</li>
       </ol>
     </nav>
     <div class="container-fluid">
@@ -115,6 +95,7 @@ foreach ($users as $user) {
           <div class="modal-body bg-dark text-white">
             <form id="patientForm" name="patientForm" method="POST" action="/pages/pdf-generation/generate-hc.php">
               <fieldset class="row mb-2">
+                <input type="hidden" name="id" id="id">
                 <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
                 <div class="col-sm-7">
                   <input type="text" class="form-control" name="inputName" id="inputName">
@@ -302,8 +283,8 @@ foreach ($users as $user) {
                 <i class="fa-solid fa-file-pdf"></i>
               </span>
             </button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button id="btnUpdate" type="button" class="btn btn-primary">Guardar cambios</button>
           </div>
         </div>
       </div>

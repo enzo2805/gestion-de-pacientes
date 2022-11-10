@@ -8,7 +8,6 @@ $inputAffiliateNumber = $_POST['inputAffiliateNumber'];
 $inputAge = $_POST['inputAge'];
 $inputCivilState = $_POST['inputCivilState'];
 $gridGender = $_POST['gridGender'];
-$gridGender = $_POST['gridGender'];
 $inputService = $_POST['inputService'];
 $inputMedic = $_POST['inputMedic'];
 $inputEntryDate = $_POST['inputEntryDate'];
@@ -34,40 +33,72 @@ $inputUrogenitalSystem = $_POST['inputUrogenitalSystem'];
 $inputLocomotorSystem = $_POST['inputLocomotorSystem'];
 $inputEvaluation = $_POST['inputEvaluation'];
 
-$sql = "insert into Paciente (nombre, apellido, afiliado_nro, hc_nro, edad, estado_civil, sexo, servicio, medico_tratante, fecha_entrada, estado_alta, diag_entrada, diag_definitivo, fecha_alta, antec_hereditarios, antec_personales, enfer_actual, psiquiatria, respiracion, pulso, temperatura, cabeza, cuello, torax, corazon, pulmones, abdomen, sis_nervioso, apar_urogenital, apar_locomotor, eval_tratamiento, estado) values (
-  "."'$inputName'".",
-  "."'$inputLastName'".",
-  ".$inputAffiliateNumber.",
-  $inputHCNumber,
-  $inputAge,
-  "."'$inputCivilState'".",
-  "."'$gridGender'".",
-  "."'$inputService'".",
-  "."'$inputMedic'".",
-  "."'$inputEntryDate'".",
-  "."'$inputEntryState'".",
-  "."'$inputEntryDiag'".",
-  "."'$inputFinalDiag'".",
-  "."'$inputDischargeDate'".",
-  "."'$inputHereditaryBackground'".",
-  "."'$inputPersonalBackground'".",
-  "."'$inputCurrentDisease'".",
-  "."'$inputPsychiatry'".",
-  "."'$inputBreathing'".",
-  "."'$inputPulse'".",
-  "."'$inputTemperature'".",
-  "."'$inputHead'".",
-  "."'$inputNeck'".",
-  "."'$inputThorax'".",
-  "."'$inputHeart'".",
-  "."'$inputLungs'".",
-  "."'$inputAbdomen'".",
-  "."'$inputNervousSystem'".",
-  "."'$inputUrogenitalSystem'".",
-  "."'$inputLocomotorSystem'".",
-  "."'$inputEvaluation'".",
-  1
-  )";
+$sql = "insert into Paciente (nombre, apellido, ";
+$sql .= $_POST['inputAffiliateNumber'] ? "afiliado_nro, " : NULL;
+$sql .= $_POST['inputHCNumber'] ? "hc_nro, " : NULL;
+$sql .= $_POST['inputAge'] ? "edad, " : NULL;
+$sql .= $_POST['inputCivilState'] ? "estado_civil, " : NULL;
+$sql .= $_POST['gridGender'] ? "sexo, " : NULL;
+$sql .= $_POST['inputService'] ? "servicio, " : NULL;
+$sql .= $_POST['inputMedic'] ? "medico_tratante, " : NULL;
+$sql .= $_POST['inputEntryDate'] ? "fecha_entrada, " : NULL;
+$sql .= $_POST['inputEntryState'] ? "estado_alta, " : NULL;
+$sql .= $_POST['inputEntryDiag'] ? "diag_entrada, " : NULL;
+$sql .= $_POST['inputFinalDiag'] ? "diag_definitivo, " : NULL;
+$sql .= $_POST['inputDischargeDate'] ? "fecha_alta, " : NULL;
+$sql .= $_POST['inputHereditaryBackground'] ? "antec_hereditarios, " : NULL;
+$sql .= $_POST['inputPersonalBackground'] ? "antec_personales, " : NULL;
+$sql .= $_POST['inputCurrentDisease'] ? "enfer_actual, " : NULL;
+$sql .= $_POST['inputPsychiatry'] ? "psiquiatria, " : NULL;
+$sql .= $_POST['inputBreathing'] ? "respiracion, " : NULL;
+$sql .= $_POST['inputPulse'] ? "pulso, " : NULL;
+$sql .= $_POST['inputTemperature'] ? "temperatura, " : NULL;
+$sql .= $_POST['inputHead'] ? "cabeza, " : NULL;
+$sql .= $_POST['inputNeck'] ? "cuello, " : NULL;
+$sql .= $_POST['inputThorax'] ? "torax, " : NULL;
+$sql .= $_POST['inputHeart'] ? "corazon, " : NULL;
+$sql .= $_POST['inputLungs'] ? "pulmones, " : NULL;
+$sql .= $_POST['inputAbdomen'] ? "abdomen, " : NULL;
+$sql .= $_POST['inputNervousSystem'] ? "sis_nervioso, " : NULL;
+$sql .= $_POST['inputUrogenitalSystem'] ? "apar_urogenital, " : NULL;
+$sql .= $_POST['inputLocomotorSystem'] ? "apar_locomotor, " : NULL;
+$sql .= $_POST['inputEvaluation'] ? "eval_tratamiento, " : NULL;
+$sql .= "estado) values (";
+$sql .= "'$inputName' ,";
+$sql .= "'$inputLastName' ,";
+$sql .= $_POST['inputAffiliateNumber'] ? $inputAffiliateNumber."' ," : NULL;
+$sql .= $_POST['inputHCNumber'] ? $inputHCNumber." ," : NULL; 
+$sql .= $_POST['inputAge'] ? $inputAge.", " : NULL;
+$sql .= $_POST['inputCivilState'] ? "'$inputCivilState' ," : NULL;
+$sql .= $_POST['gridGender'] ? "'$gridGender' ," : NULL;
+$sql .= $_POST['inputService'] ? "'$inputService' ," : NULL;
+$sql .= $_POST['inputMedic'] ? "'$inputMedic' ," : NULL;
+$sql .= $_POST['inputEntryDate'] ? "'$inputEntryDate' ," : NULL;
+$sql .= $_POST['inputEntryState'] ? "'$inputEntryState' ," : NULL;
+$sql .= $_POST['inputEntryDiag'] ? "'$inputEntryDiag' ," : NULL;
+$sql .= $_POST['inputFinalDiag'] ? "'$inputFinalDiag' ," : NULL;
+$sql .= $_POST['inputDischargeDate'] ? "'$inputDischargeDate' ," : NULL;
+$sql .= $_POST['inputHereditaryBackground'] ? "'$inputHereditaryBackground' ," : NULL;
+$sql .= $_POST['inputPersonalBackground'] ? "'$inputPersonalBackground' ," : NULL;
+$sql .= $_POST['inputCurrentDisease'] ? "'$inputCurrentDisease' ," : NULL;
+$sql .= $_POST['inputPsychiatry'] ? "'$inputPsychiatry' ," : NULL;
+$sql .= $_POST['inputBreathing'] ? "'$inputBreathing' ," : NULL;
+$sql .= $_POST['inputPulse'] ? "'$inputPulse' ," : NULL;
+$sql .= $_POST['inputTemperature'] ? "'$inputTemperature' ," : NULL;
+$sql .= $_POST['inputHead'] ? "'$inputHead' ," : NULL;
+$sql .= $_POST['inputNeck'] ? "'$inputNeck' ," : NULL;
+$sql .= $_POST['inputThorax'] ? "'$inputThorax' ," : NULL;
+$sql .= $_POST['inputHeart'] ? "'$inputHeart' ," : NULL;
+$sql .= $_POST['inputLungs'] ? "'$inputLungs' ," : NULL;
+$sql .= $_POST['inputAbdomen'] ? "'$inputAbdomen' ," : NULL;
+$sql .= $_POST['inputNervousSystem'] ? "'$inputNervousSystem' ," : NULL;
+$sql .= $_POST['inputUrogenitalSystem'] ? "'$inputUrogenitalSystem' ," : NULL;
+$sql .= $_POST['inputLocomotorSystem'] ? "'$inputLocomotorSystem' ," : NULL;
+$sql .= $_POST['inputEvaluation'] ? "'$inputEvaluation' ," : NULL;
+$sql .= 1;
+$sql .= ")";
+
+header('Content-Type: text/html; charset=utf-8');
 
 if ($conn->query($sql) === TRUE) {
   echo "True";

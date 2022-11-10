@@ -1,21 +1,3 @@
-<?php
-require_once './db.php';
-
-// select query
-/*$sql = 'SELECT * FROM users';
-
-if ($result = $conn->query($sql)) {
-  while ($data = $result->fetch_object()) {
-    $users[] = $data;
-  }
-}
-
-foreach ($users as $user) {
-  echo "<br>";
-  echo $user->username . " " . $user->password;
-  echo "<br>";
-}*/
-?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -78,7 +60,7 @@ foreach ($users as $user) {
             <div class="card bg-primary text-white vertical-heigth-card">
               <div class="row g-0">
                 <div class="col-5 col-sm-4 align-self-center text-center">
-                  <i class="fa-solid fa-rectangle-list fa-5x" alt="icono de paciente"></i>
+                  <i class="fa-solid fa-rectangle-list fa-5x" alt="icono de lista de pacientes"></i>
                 </div>
                 <div class="col-7 col-sm-8">
                   <div class="card-body ">
@@ -92,7 +74,7 @@ foreach ($users as $user) {
           </a>
         </div>
         <div class="col-md-3">
-          <a href="pages/pami/reumatoidea-inicio.php" class="text-dark">
+          <a href="pages/lists/list-reumatoidea-inicio.php" class="text-dark">
             <div class="card bg-dark text-white vertical-heigth-card">
               <div class="row g-0">
                 <div class="col-5 col-sm-4 align-self-center text-center">
@@ -112,7 +94,7 @@ foreach ($users as $user) {
       </div>
       <div class="row justify-content-md-center my-3">
         <div class="col-md-3">
-          <a href="" class="text-dark">
+          <a href="pages/lists/list-reumatoidea-renovacion.php" class="text-dark">
             <div class="card bg-dark text-white vertical-heigth-card">
               <div class="row g-0">
                 <div class="col-5 col-sm-4 align-self-center text-center">
@@ -174,7 +156,5 @@ foreach ($users as $user) {
 
     <script src="/js/bootstrap.bundle.min.js"></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
   </body>
 </html>

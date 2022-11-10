@@ -54,10 +54,10 @@ foreach ($users as $user) {
         <a class="navbar-brand" href="../../.">Gestión de pacientes</a>
       </div>
     </nav>
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="mt-2 mx-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../.">Gestión de Pacientes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Nuevo paciente</li>
+        <li class="breadcrumb-item"><a href="../../." class=" badge bg-primary text-white">Gestión de Pacientes</a></li>
+        <li class="breadcrumb-item badge bg-light active" aria-current="page">Nuevo paciente</li>
       </ol>
     </nav>
     <div class="container-fluid">
