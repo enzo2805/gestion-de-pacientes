@@ -70,7 +70,7 @@ $(document).ready( function () {
       .then(response => response.json())
       .then(data => {
         data = data[0];
-        console.log(data);
+        // console.log(data);
         
         data.subtotales = JSON.parse(data.subtotales);
         one = parseInt(data.subtotales[0]);
@@ -78,7 +78,7 @@ $(document).ready( function () {
         three = parseInt(data.subtotales[2]);
         four = parseInt(data.subtotales[3]);
 
-        addRowFarmaco(JSON.parse(data.excep_droga).length);
+        if ( data.excep_droga ) addRowFarmaco(JSON.parse(data.excep_droga).length);
 
         form.id.value = data.id_paciente;
         form.inputName.value = data.nombre;
@@ -91,21 +91,29 @@ $(document).ready( function () {
         form.inputVSG.value = data.vsg;
         form.inputPCR.value = data.pcr;
         form.inputCPP.value = data.anti_ccp;
-        data.excep_droga = JSON.parse(data.excep_droga);
-        for (let index = 0; index < data.excep_droga.length; index++) {
-          const element = data.excep_droga[index];
-          excep_droga[index].value = element;
+        
+        if( data.excep_droga ) {
+          data.excep_droga = JSON.parse(data.excep_droga);
+          for (let index = 0; index < data.excep_droga.length; index++) {
+            const element = data.excep_droga[index];
+            excep_droga[index].value = element;
+          }
         }
-        data.excep_present = JSON.parse(data.excep_present);
-        for (let index = 0; index < data.excep_present.length; index++) {
-          const element = data.excep_present[index];
-          excep_present[index].value = element;
+        if( data.excep_present ) {
+          data.excep_present = JSON.parse(data.excep_present);
+          for (let index = 0; index < data.excep_present.length; index++) {
+            const element = data.excep_present[index];
+            excep_present[index].value = element;
+          }
         }
-        data.excep_dosis = JSON.parse(data.excep_dosis);
-        for (let index = 0; index < data.excep_dosis.length; index++) {
-          const element = data.excep_dosis[index];
-          excep_dosis[index].value = element;
+        if( data.excep_dosis ) {
+          data.excep_dosis = JSON.parse(data.excep_dosis);
+          for (let index = 0; index < data.excep_dosis.length; index++) {
+            const element = data.excep_dosis[index];
+            excep_dosis[index].value = element;
+          }
         }
+        
         form.monoDrug[data.monodroga].checked = true;
         form.inputRelatedTo.value = data.asociada_con;
         if ( data.hombros != 'null' ) {
@@ -305,7 +313,7 @@ btnMakePDF.addEventListener('click', (event) => {
   });
 
   XHR.addEventListener('progress', (event) =>{
-    console.log(event);
+    // console.log(event);
   })
 
   XHR.addEventListener('error', (event) => {
@@ -330,7 +338,7 @@ btnSave.addEventListener('click', (event) => {
 
   XHR.addEventListener('load', (event) => {
     const data = event.target.responseText;
-    console.log(data);
+    // console.log(data);
     const response = event.target.responseText;
     if (response.includes('True')) {
       alert('Datos guardados exitosamente');

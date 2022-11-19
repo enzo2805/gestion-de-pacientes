@@ -5,10 +5,10 @@
 $host = 'db';
 
 // Database use name
-$user = 'MYSQL_USER';
+$user = 'root';
 
 //database user password
-$pass = 'MYSQL_PASSWORD';
+$pass = 'p4c1nt35@2022';
 
 // database name
 $mydatabase = 'gestion_pacientes';

@@ -20,6 +20,11 @@
         width: 90% !important;
         margin: 0 auto; 
       }
+      .icono-deshabilitado {
+        width: 90% !important;
+        margin: 0 auto; 
+        opacity: 25%;
+      }
       .vertical-heigth-card{
         height: 9rem !important;
       }
@@ -112,40 +117,40 @@
           </a>
         </div>
         <div class="col-md-3">
-          <a href="" class="text-success">
-            <div class="card bg-success text-white vertical-heigth-card">
+          <!-- <a href="" class="text-success"> -->
+            <div class="card bg-success bg-opacity-75 text-white vertical-heigth-card">
               <div class="row g-0">
                 <div class="col-5 col-sm-4 align-self-center text-center">
-                  <img src="images/pormassalud-logo.png" class="img-fluid icono" alt="icono por más salud`">
+                  <img src="images/pormassalud-logo.png" class="img-fluid icono-deshabilitado" alt="icono por más salud`">
                 </div>
                 <div class="col-7 col-sm-8">
                   <div class="card-body">
-                    <h5 class="card-title">Por + Salud</h5>
-                    <p class="card-text">Pedido de práctica: Resonancia magnética 1.5 T</p>
-                    <p class="card-text"><small class="text-white">Entrar</small></p>
+                    <h5 class="card-title text-muted">Por + Salud</h5>
+                    <p class="card-text text-muted">Pedido de práctica: Resonancia magnética 1.5 T</p>
+                    <p class="card-text text-muted"><small class="text-white">Entrar</small></p>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
         <div class="col-md-3">
-          <a href="" class="text-secondary">
-            <div class="card bg-secondary text-white vertical-heigth-card">
+          <!-- <a href="" class="text-secondary"> -->
+            <div class="card bg-secondary bg-opacity-75 text-white vertical-heigth-card">
               <div class="row g-0">
                 <div class="col-5 col-sm-4 align-self-center text-center">
-                  <img src="images/imagenes-jaraba-logo.png" class="img-fluid icono" alt="icono por más salud`">
+                  <img src="images/imagenes-jaraba-logo.png" class="img-fluid icono-deshabilitado" alt="icono por más salud`">
                 </div>
                 <div class="col-7 col-sm-8">
                   <div class="card-body">
-                    <h5 class="card-title">Imágenes Jaraba</h5>
-                    <p class="card-text">Pedido de TAC (Tomografía Axial Computarizada)</p>
-                    <p class="card-text"><small class="text-white">Entrar</small></p>
+                    <h5 class="card-title text-muted">Imágenes Jaraba</h5>
+                    <p class="card-text text-muted">Pedido de TAC (Tomografía Axial Computarizada)</p>
+                    <p class="card-text text-muted"><small class="text-white">Entrar</small></p>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
     </div>
