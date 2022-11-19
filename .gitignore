@@ -1,0 +1,8 @@
+php/src/tests.php
+data/db/*
+gestion_pacientes.sql
+php/src/vendor/*.*
+php/src/vendor/
+php/src/pages/pdf-generation/generate-hc-test.php
+php/src/pages/pdf-generation/withdompdf.php
+php/src/pages/pdf-generation/hc.php

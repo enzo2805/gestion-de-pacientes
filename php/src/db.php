@@ -5,13 +5,13 @@
 $host = 'db';
 
 // Database use name
-$user = 'MYSQL_USER';
+$user = 'root';
 
 //database user password
-$pass = 'MYSQL_PASSWORD';
+$pass = 'p4c1nt35@2022';
 
 // database name
-$mydatabase = 'MYSQL_DATABASE';
+$mydatabase = 'gestion_pacientes';
 // check the mysql connection status
 
 $conn = new mysqli($host, $user, $pass, $mydatabase);
