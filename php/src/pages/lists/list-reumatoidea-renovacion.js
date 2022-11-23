@@ -671,6 +671,7 @@ function changeLabel(value, checked){
 }
 
 form.inputVSG.addEventListener('change', (e) => {
+  form.inputVSG.value = e.target.value.replace(/,/, '.');
   let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
   form.das28.value = value.toFixed(4);
 })
@@ -682,4 +683,17 @@ vasRadios.forEach(radio => {
     let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
     form.das28.value = value.toFixed(4);
   })
+});
+
+form.inputRFactor.addEventListener('change', (e) => {
+  form.inputRFactor.value = e.target.value.replace(/,/, '.');
+});
+form.inputPCR.addEventListener('change', (e) => {
+  form.inputPCR.value = e.target.value.replace(/,/, '.');
+});
+form.inputCPP.addEventListener('change', (e) => {
+  form.inputCPP.value = e.target.value.replace(/,/, '.');
+});
+form.haq.addEventListener('change', (e) => {
+  form.haq.value = e.target.value.replace(/,/, '.');
 });
