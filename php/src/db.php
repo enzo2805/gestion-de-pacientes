@@ -8,7 +8,7 @@ $host = 'db';
 $user = 'root';
 
 //database user password
-$pass = 'p4c1nt35@2022';
+$pass = 'norteP2023'; //p4c1nt35@2022
 
 // database name
 $mydatabase = 'gestion_pacientes';

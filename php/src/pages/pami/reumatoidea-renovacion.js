@@ -364,8 +364,6 @@ function changeLabel(value, checked){
       iDolorosasLabel.innerHTML = one;
       iDolorosasInput.value = one;
       dolorosasTotal.value = one + three;
-      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
-      form.das28.value = value.toFixed(4);
       break;
     }
     case 2:{
@@ -373,8 +371,6 @@ function changeLabel(value, checked){
       iInflamadasLabel.innerHTML = two;
       iInflamadasInput.value = two;
       inflamadasTotal.value = two + four;
-      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
-      form.das28.value = value.toFixed(4);
       break;
     }
     case 3:{
@@ -382,8 +378,6 @@ function changeLabel(value, checked){
       dDolorosasLabel.innerHTML = three;
       dDolorosasInput.value = three;
       dolorosasTotal.value = one + three;
-      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
-      form.das28.value = value.toFixed(4);
       break;
     }
     case 4:{
@@ -391,37 +385,7 @@ function changeLabel(value, checked){
       dInflamadasLabel.innerHTML = four;
       dInflamadasInput.value = four;
       inflamadasTotal.value = two + four;
-      let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
-      form.das28.value = value.toFixed(4);
       break;
     }
   }
 }
-
-form.inputVSG.addEventListener('change', (e) => {
-  form.inputVSG.value = e.target.value.replace(/,/, '.');
-  let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
-  form.das28.value = value.toFixed(4);
-})
-
-const vasRadios = document.getElementsByName('vasRadio');
-
-vasRadios.forEach(radio => {
-  radio.addEventListener('change', (e) => {
-    let value = 0.56 * form.dolorosasTotal.value + 0.28 * form.inflamadasTotal.value + 0.7 * Math.log(form.inputVSG.value) + 0.014 * form.vasRadio.value;
-    form.das28.value = value.toFixed(4);
-  })
-});
-
-form.inputRFactor.addEventListener('change', (e) => {
-  form.inputRFactor.value = e.target.value.replace(/,/, '.');
-});
-form.inputPCR.addEventListener('change', (e) => {
-  form.inputPCR.value = e.target.value.replace(/,/, '.');
-});
-form.inputCPP.addEventListener('change', (e) => {
-  form.inputCPP.value = e.target.value.replace(/,/, '.');
-});
-form.haq.addEventListener('change', (e) => {
-  form.haq.value = e.target.value.replace(/,/, '.');
-});

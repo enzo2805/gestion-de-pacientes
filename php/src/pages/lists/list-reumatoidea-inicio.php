@@ -569,7 +569,6 @@
                   <input type="email" class="form-control" name="inputEmail" id="inputEmail">
                 </div>
               </div>
-              <button type="submit" id="saveBtn" class="btn btn-primary">Guardar</button>
             </form>
           </div>
           <div class="modal-footer bg-dark text-white">
