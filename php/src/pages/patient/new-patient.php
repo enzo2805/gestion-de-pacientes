@@ -71,7 +71,7 @@ foreach ($users as $user) {
             </div>
             <label for="inputHCNumber" class="col-sm-1 col-form-label">H.C.Nº</label>
             <div class="col-sm-2">
-              <input type="number" min="0" max="999999" class="form-control" name="inputHCNumber" id="inputHCNumber">
+              <input type="number" min="0" class="form-control" name="inputHCNumber" id="inputHCNumber">
             </div>
           </fieldset>
           <fieldset class="row mb-2">
@@ -81,7 +81,7 @@ foreach ($users as $user) {
             </div>
             <label for="inputAffiliateNumber" class="col-sm-1 col-form-label">Afiliado Nº</label>
             <div class="col-sm-2">
-              <input type="number" min="0" max="999999" class="form-control" name="inputAffiliateNumber" id="inputAffiliateNumber">
+              <input type="number" min="0" class="form-control" name="inputAffiliateNumber" id="inputAffiliateNumber">
             </div>
           </fieldset>
           <fieldset class="row mb-2">
